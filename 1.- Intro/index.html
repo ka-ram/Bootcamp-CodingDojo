@@ -1,0 +1,149 @@
+<!DOCTYPE html> <!--Nos indica que usamos HTML5-->
+<html lang="es"> <!--Idioma español-->
+
+<head>
+    <meta charset="UTF-8"> <!--Caracteres-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- tengo un atributo name y su contenido es "viewport". Atributo content y su contenido es "width=device-width, initial-scale=1.0". Esto ultimo significa que la Escala es 1:1-->
+    <title>Intro-Bootcamp</title>
+    <link rel="stylesheet" href="css/style.css"> <!--Ruta para conectar mi archivo con estilos CSS (cascade style sheets)-->
+</head>
+
+<body>
+    <h1>Encabezado 1</h1>
+    <h2>Encabezado 2</h2>
+    <h3>Encabezado 3</h3>
+    <h4 class="rojo subrayado">Encabezado 4</h4>
+    <h5>Encabezado 5</h5>
+    <h6>Encabezado 6</h6>
+
+    <p class="rojo">Este es el primer párrafo de mi página web</p>
+    <p id="parrafo_especial">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni itaque eius quibusdam, neque minus quam nihil possimus soluta est quia eum dignissimos fuga fugit a praesentium quod, ab eligendi labore!</p>
+    <p>
+        Parrafo con etiqueta <strong>strong</strong>
+    </p>
+    <strong>Strong fuera de párrafo</strong>
+
+    <!--PONER AQUI LO DEL segundo PANTALLAZO-->
+
+    <!--Anchor = Ancla. Es decir, un hipervinculo o encale-->
+    <a href="http://google.com" target="_blank">Este es un hipervinculo</a> <!--target="_blank" sirve para abrir el hipervinculo en una nueva pestaña del navegador-->
+
+    <h2>Lista desordenada</h2>
+    <!--Unordered List-->
+    <ul>
+        <!--List Item-->
+        <li>Gatos</li>
+        <li>Perros</li>
+        <li>Pájaros</li>
+        <li>Tlacuache</li>
+        <li>Venado</li>
+    </ul>
+    <h2>Lista ordenada</h2>
+    <!--Ordered List-->
+    <ol>
+        <li>Entrar a la sesión de zoom</li>
+        <li>Poner mucha atención en clase</li>
+        <li>Realizar las actividades CORE</li>
+    </ol>
+
+    <h2>Tabla</h2>
+    <table>
+        <!--Encabezado de la Tabla-->
+        <thead>
+            <!--Table row:  fila-->
+            <tr>
+                <!--Table heading: titulo negritas-->
+                <th>Encabezado 1</th>
+                <th>Encabezado 2</th>
+                <th>Encabezado 3</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Columna 1.1</td>
+                <td>Columna 1.2</td>
+                <td>Columna 1.3</td>
+            </tr>
+            <tr>
+                <td>Columna 2.1</td>
+                <td>Columna 2.2</td>
+                <td>Columna 2.3</td>
+            </tr>
+            
+        </tbody>
+    </table>
+
+    <img src="img/Espresso.jpg" alt="pastel">
+    <video src="img/video.mp4" autoplay loop muted></video>
+
+    
+    <img src="img/tags.png" alt="html tags">
+    
+    <p><em>Este es un párrafo enfatizado.</em></p>
+
+    <h3>Pez Globo</h3>
+
+                <p>¿No ves lo genial que esto es? Tú, tú eres un... Jesse, mírame.<br>
+
+            Tú... eres un pez globo. ¡Un pez globo! Piénsalo. Pequeño de estatura,<br>
+
+            no rápido, no astuto. Presa fácil para los depredadores, pero el pez globo<br>
+
+            tiene un arma secreta, ¿verdad que sí? ¿Verdad que sí? ¿Qué hace el pez globo,<br>
+
+            Jesse? ¿Qué hace el pez globo? El pez globo se infla, ¿vale?</p>
+    
+    <!--Formulario-->
+    <form action="#" method="POST"> <!-- action="aqui próximamente irá una url "-->
+        <!--Divisor... es una caja divisora-->
+        <div>
+            <label>Llena estos campos:</label>
+            <input type="text" name="input_texto">
+            <input type="number" name="input_number">
+            <input type="password" name="input_password">
+            <input type="date" name="input_date">
+            <input type="email" name="input_email">
+        </div>
+        <div>
+            <label for="casado_id">Casado</label>
+            <input type="radio" id="casado_id" value="casado" name="estado-civil"><br>
+            <label for="soltero_id">Solteroo</label>
+            <input type="radio" id="solteroo_id" value="solteroo" name="estado-civil">
+            <!--Como ambos tienen el mismo name="estado-civil", me permite seleccionar sólo uno de los dos-->
+        </div>
+        <div>
+            <input type="checkbox" name="mayor_edad" id="mayor">
+            <label for="mayor">¿Es mayor de edad?</label><br>
+        </div>
+        <div>
+            <select name="lenguaje">
+                <option value="py">Python</option>
+                <option value="j">Java</option>
+                <option value="c">C#</option>
+
+            </select>
+        </div>
+        <div>
+            <!--Para areas de texto más extensas-->
+            <textarea name="Comentario" cols="100" rows="5"></textarea>
+        </div>
+        <div>
+            <input type="submit" value="Guardar Datos">
+        </div>
+
+    </form>
+
+    <h3 id="color">Prueba de Color</h3>
+
+    <div class="tamano"></div>
+
+    <p class="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem cupiditate eligendi voluptates tempora tenetur delectus, praesentium, saepe asperiores ipsam libero perferendis aperiam vero quia eos laudantium odit omnis suscipit nam!</p>
+
+    <div class="fondo">PUEDO PONER TEXTO AQUI PORQUE LA IMAGEN EN ESTE CASO LA ESTOY USANDO EN EL CSS COMO FONDO. LO MALO ES QUE NO SE LE PUEDE DAR OPACIDAD</div>
+
+    <div class="animado"  id="modelo_caja">Modelo de Caja</div>
+
+
+</body>
+
+</html>

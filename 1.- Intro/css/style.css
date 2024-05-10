@@ -1,0 +1,119 @@
+/* 
+CSS = Cascade Style Sheets (Hojas de estilo en cascada)
+
+para crear una clase, coloco unpunto seguido del nombre de la clase ejemplo .clase{ }
+
+No puedo usar Espacio para nombres de clases, porque en html yo llamo a una clase, y luego uso un espacio y luego otra clase
+
+#id{ propiedad: valor; }  el id sólo se le puede poner a un elemento
+
+Órden jerárquico (es decir, cómo el sistem sabe qué estilo aplicar en caso de que se sobreescriban: ID  -  CLASES  - ETIQUETAS 
+
+Cualquier selector del lado derecho es hijo del que está al lado izquierdo. (ESTO es sólo para cuando tengo un espacio entre medio)
+*/
+
+h2{
+    color: blue;
+    font-size: 40px;
+}
+
+.rojo{
+    color: red;
+}
+.subrayado{
+    text-decoration: underline;
+}
+
+#parrafo_especial{
+    border: 2px solid purple;
+    font-size: 16px;
+}
+
+p strong{    /* Aquí con el espacio, estpy diciendo: La etiqueta P es el padre de STRONG*/
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+.container > p{
+    border: 1px dashed red;
+}
+
+input[type="text"]{
+    width: 350px;
+}
+
+input[type="number"]{
+    height: 100px;
+}
+
+input, textarea{
+    border: 3px solid magenta;
+}
+
+#color{
+    /*color d emi texto*/
+    color: magenta;
+    color: #ababce;
+    color: rgb(0, 247, 255);
+    color: rgb(69 187 161);
+    background-color: yellow;
+}
+
+/*Propiedades de tamaño*/
+.tamano{
+    background-color: gray;
+    width: 400px;
+    height: 50px;
+}
+
+.texto{
+    text-align: center;
+    text-decoration: line-through; /* subrayado */
+    font-style: italic;
+    font-weight: bold;
+    font-family: sans-serif; /* SANS SERIF, significa SIN SERIFAS */
+    font-size: 20px; /* puede ser el tamaño como:  px    pt   em   */
+}
+
+.fondo{
+    width: 400px;
+    height: 600px;
+    border: 2px dotted black; /*double es linea doble, dotted es con puntitos, DASHED es linea segmentada, y SOLID es línea solida*/
+
+    background-color: aqua;
+    background-image: url(../img/redrum.jpg);   /* si pongo ../ automaticamente me muestra las carpetas que puedo seleccionar*/
+    background-repeat: round; /* repeat la repite pero puede que quede cortada, "space" la repite añadiendo un espacio entre medio segun sea necesario para que no se corte la imagen. y "round" la repite sin que se corte, pero puede deformar la imagen , no-repeat, repeat-x que se repita horizontalmente, repeat-y que se repita verticalmente*/
+    /*background-size: cover; /* cover estira la imagen verticalmente, conain lo que hace es estirar horizontalmente*/   
+}
+
+#modelo_caja{
+    background-color: lightblue;
+    width: 100px;
+    height: 100px;  
+    /* Margin es el espacio entre el elemento y el resto de la pagina. lo uso para serapara, espaciar, colocar en distinas ubocaciones mis elementos */
+    margin: 20px;
+    margin-top: 100px; /* solo el margen de arriba (top) es de 100px. existen varios tipos de margin, top, bottom, reight, left. me sirven para especificar el margen especifico de un lado*/
+    margin: 50px 15px; /* si hago esto, el primer valor representa el margen de arriba y abajo, y el de 15px representa izquierda y derecha*/
+    margin: 50px /*arriba*/ 10px /*derecha*/  100px/*abajo*/  200px/*izquierda*/;
+    padding: 20px;
+    padding-top: 20px;
+    padding: 100px 5px;
+    border: 2px double rebeccapurple;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+}
+.item {
+    border: 1px solid black;
+}
+
+@keyframes animacion {
+    from { background-color: rgb(181, 253, 0); }
+    to { background-color: yellow; }
+}
+.animado {
+    animation: animacion 2s infinite;
+}
